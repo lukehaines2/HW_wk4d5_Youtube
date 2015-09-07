@@ -1,0 +1,9 @@
+<div class="main">
+<% @videos.each do |video| %>
+<h3><a href="/videos/<%= video['title']%>"><%= video['title'] %></a></h3>
+<!-- Careful of the set heights - should it be % -->
+<p><iframe id="player" type="text/html" width="640" height="390" src="<%= video['url'] %>" frameborder="0"></iframe></p>
+<p><%= video['description']%></p>
+<p><%= video['genre']%></p>
+<% end %>
+</div>
